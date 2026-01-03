@@ -6,7 +6,7 @@ A responsive Pokédex web application built with vanilla JavaScript that consume
 ![Pokédex Preview](./img/Pokedex_app_preview.png)
 
 ## Live Demo
-🔗 https://RedRobin995.github.io/PokeDex-Project/
+🔗 https://RedRobin995.github.io/pokedex-project/
 
 ## Technologies
 - HTML5
