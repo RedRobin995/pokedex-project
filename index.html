@@ -7,6 +7,7 @@
   <title>Pokédex</title>
   <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
 
   <header>
@@ -14,14 +15,10 @@
       <img src="./img/logo.png" alt="Logo Pokédex">
 
       <ul class="nav-list">
-        <!-- VER TODOS -->
         <li class="nav-item">
-          <button class="btn btn-header tipo-btn" id="ver-todos">
-            Ver todos
-          </button>
+          <button class="btn btn-header tipo-btn" id="ver-todos">Ver todos</button>
         </li>
 
-        <!-- TIPOS -->
         <li class="nav-item"><button class="btn btn-header tipo-btn normal" id="normal">Normal</button></li>
         <li class="nav-item"><button class="btn btn-header tipo-btn fire" id="fire">Fire</button></li>
         <li class="nav-item"><button class="btn btn-header tipo-btn water" id="water">Water</button></li>
@@ -42,21 +39,41 @@
         <li class="nav-item"><button class="btn btn-header tipo-btn fairy" id="fairy">Fairy</button></li>
       </ul>
 
-      <!-- BOTÓN SHINY (NO es filtro) -->
-      <button class="btn btn-header" id="toggle-shiny">
-        Shiny
-      </button>
-
+      <button class="btn btn-header" id="toggle-shiny">Shiny</button>
     </nav>
   </header>
 
   <main>
     <div id="todos">
-      <div class="pokemon-todos" id="listaPokemon">
-        <!-- Los Pokémon se inyectan aquí por JS -->
-      </div>
+      <div class="pokemon-todos" id="listaPokemon"></div>
     </div>
   </main>
+
+  <!--  LOADERS -->
+  <div id="loader" class="loader">
+    <img src="./img/pokeball_loader.gif" alt="Cargando Pokédex">
+    <p>Cargando Pokédex...</p>
+  </div>
+
+<template id="skeleton-template">
+  <div class="pokemon skeleton">
+    <div class="pokemon-id-back skeleton-box"></div>
+
+    <div class="pokemon-imagen skeleton-box"></div>
+
+    <div class="pokemon-info">
+      <div class="nombre-contenedor">
+        <div class="skeleton-box skeleton-text"></div>
+        <div class="skeleton-box skeleton-text"></div>
+      </div>
+
+      <div class="pokemon-tipos">
+        <div class="skeleton-box skeleton-pill"></div>
+        <div class="skeleton-box skeleton-pill"></div>
+      </div>
+    </div>
+  </div>
+</template>
 
   <script src="js/main.js"></script>
 </body>
